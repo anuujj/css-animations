@@ -2,7 +2,7 @@
   width: 100px;
   height: 100px;
   background-color: red;
-  animation: color-transition 2s linear infinite;
+  animation: color-transition 2s linear 2;
   animation-delay: 2s;
   /* linear: same speed throughout the animation  */
   /* ease: slow at the beginning, fast in the middle, slow at the end */
@@ -10,11 +10,15 @@
   /* ease-out: fast at the beginning, slow at the end */
   /* ease-in-out: slow at the beginning and end, fast in the middle , similar to ease but is slower than ease at both ends */
   /* animation-fill-mode: forwards; */
-  animation-direction: alternate-reverse; /* normal, reverse, alternate, alternate-reverse */
+  animation-direction: alternate; /* normal, reverse, alternate, alternate-reverse */
   /* normal -->  red to blue */
   /* reverse --> blue to red */
   /* alternate --> red to blue to blue to red */
   /* alternate-reverse --> blue to red to red to blue */
+  animation-fill-mode: backwards; /*element will be styled back to the first keyframe style */
+  /* forwards : element will be styled back to the last keyframe style  */
+  /* both : both first and last keyframe styles will be followed  */
+
 }
 @keyframes color-transition {
   0% {
