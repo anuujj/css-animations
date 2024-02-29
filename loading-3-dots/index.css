@@ -1,0 +1,95 @@
+:root {
+  --diameter: 30px;
+}
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 110px;
+  margin: 10rem auto;
+}
+.d {
+  height: var(--diameter);
+  width: var(--diameter);
+  background-color: aqua;
+  border-radius: 100%;
+}
+.dot1 {
+  animation: scale 0.5s linear 0s infinite alternate;
+}
+.dot2 {
+  animation: scale 0.5s linear 0.5s infinite alternate;
+}
+.dot3 {
+  animation: scale 0.5s linear 1s infinite alternate;
+}
+.dot4{
+    animation: pulse-1 1.5s linear 0s infinite;
+}
+.dot5{
+    animation: pulse-2 1.5s linear 0s infinite;
+}
+.dot6{
+    animation: pulse-3 1.5s linear 0s infinite;
+}
+@keyframes scale {
+  100% {
+    background-color: rgb(13, 188, 188);
+    transform: scale(1.25, 1.25);
+  }
+}
+@keyframes pulse-1{
+    0%{
+        transform: scale(0,0);
+    }
+    20%{
+        background-color: rgb(13, 188, 188);
+        transform: scale(1.25,1.25)
+    }
+    40%{
+        background-color: aqua;
+        transform: scale(0,0);
+    }
+    100%{
+        transform: scale(0,0);
+    }
+}
+@keyframes pulse-2 {
+    0%{
+        transform: scale(0,0);
+    }
+    20%{
+        transform: scale(0,0);
+    }
+    40%{
+        background-color: rgb(13, 188, 188);
+        transform: scale(1.25,1.25);
+    }
+    60%{
+        background-color: aqua;
+        transform: scale(0,0);
+    }
+    100%{
+        transform: scale(0,0);
+    }
+
+}
+@keyframes pulse-3 {
+    0%{
+        transform: scale(0,0);
+    }
+    40%{
+        transform: scale(0,0);
+    }
+    60%{
+        background-color: rgb(13, 188, 188);
+        transform: scale(1.25, 1.25);
+    }
+    80%{
+        background-color: aqua;
+        transform: scale(0,0);
+    }
+    100%{
+        transform: scale(0,0);
+    }
+}
