@@ -1,0 +1,76 @@
+body {
+  background-color: black;
+}
+.face{
+    display: flex;
+    align-items: flex-end;
+}
+.nose{
+    height: 7px;
+    width: 12px;
+    border-radius: 100%/ 100% 100% 150% 150%;
+    background-color: white;
+}
+.eye {
+  position: relative;
+  height: 50px;
+  width: 51px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background-color: white;
+}
+.eye::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  border-radius: 0 0 50% 50% / 0 0 40% 40%;
+  background: black;
+  animation: blink 4s infinite ease-in;
+}
+.cornea {
+  position: absolute;
+  top: 37%;
+  right: 30%;
+  height: 40%;
+  width: 20%;
+  border-radius: 100%;
+  background-color: black;
+  animation: roll-eyes 4s infinite;
+}
+.pupil {
+  position: absolute;
+  top: 30%;
+  right: -1px;
+  height: 40%;
+  width: 40%;
+  border-radius: 100%;
+  background-color: white;
+}
+@keyframes roll-eyes {
+  0%,
+  20%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(50%, -50%);
+  }
+  15% {
+    transform: translate(-90%, -50%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100%,
+  80%,
+  90% {
+    height: 0;
+  }
+  85%,
+  95% {
+    height: 100%;
+  }
+}
