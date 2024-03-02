@@ -1,0 +1,47 @@
+.box {
+  height: 52px;
+  width: 52px;
+  position: relative;
+  margin: 4rem;
+  transform-style: preserve-3d;
+  animation: roll-dice 10s infinite;
+}
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: aquamarine;
+  border: 1px solid black;
+  opacity: 0.5;
+}
+.one {
+  transform: translateZ(26px);
+}
+.two {
+  transform: rotateY(90deg) translateZ(26px);
+}
+.five {
+  transform: rotateY(-90deg) translateZ(-26px);
+}
+.three {
+  transform: rotateX(-90deg) translateZ(-26px);
+}
+.four {
+  transform: rotateX(90deg) translateZ(26px);
+}
+.six {
+  transform: translateZ(-26px);
+}
+
+@keyframes roll-dice {
+  0%,
+  100% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  50% {
+    transform: rotate3d(1, 1, 0, 360deg);
+  }
+}
