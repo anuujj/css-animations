@@ -3,47 +3,38 @@
   justify-content: center;
   align-items: center;
   height: 50vh;
+  background-color: rgb(145, 130, 130);
 }
 .border-gradient {
-  position: relative;
-  height: 4rem;
   width: 10rem;
-  color: #fff;
-  background-color: #000;
-  border-radius: 50em;
-  border: 4px solid transparent;
+  height: 4rem;
+  display: grid;
+  place-content: center;
+  color: white;
+  border-radius: 2.4rem;
+  --rotation-angle: 0deg;
+  background: radial-gradient(rgb(57, 56, 56), black) padding-box,
+    conic-gradient(
+        black calc(var(--rotation-angle) + 1deg),
+        rgb(156, 210, 230) calc(var(--rotation-angle) + 40deg),
+        black calc(var(--rotation-angle) + 41deg)
+      )
+      border-box;
+  border: 2px solid transparent;
+  cursor: pointer;
+  animation: rotate-border 2s linear forwards infinite;
 }
-.border-gradient::after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  height: 4.6rem;
-  width: 10.6rem;
-  background: linear-gradient(
-    60deg,
-    #f79533,
-    #f37055,
-    #ef4e7b,
-    #a166ab,
-    #5073b8,
-    #1098ad,
-    #07b39b,
-    #6fba82
-  );
-  border-radius: 50em;
-  z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
+.border-gradient:hover {
+  animation-play-state: paused;
 }
-@keyframes animatedgradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+@property --rotation-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0turn;
+}
+
+@keyframes rotate-border {
+  to {
+    --rotation-angle: 360deg;
   }
 }
