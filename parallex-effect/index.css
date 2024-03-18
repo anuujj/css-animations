@@ -1,10 +1,10 @@
-:root{
-    margin: 0;
-    padding:0;
+:root {
+  margin: 0;
+  padding: 0;
 }
-body{
-    margin:0;
-    padding:0;
+body {
+  margin: 0;
+  padding: 0;
 }
 .container {
   width: 100vw;
@@ -14,15 +14,39 @@ body{
   position: absolute;
 }
 .tree1 {
-  /* transform: scale(0.25, 0.25); */
   height: 100vh;
-  right: 0cm;
+  right: 3rem;
+  transform-origin: top;
+  animation: zoom-in-right linear forwards;
+  animation-timeline: scroll();
 }
 .tree2 {
   height: 100vh;
-  left: 0px;
+  left: -5rem;
+  transform-origin: top;
+  animation: zoom-in-left linear forwards;
+  animation-timeline: scroll();
 }
 .mountain {
   height: 100vh;
   width: 100%;
+  transform-origin: top;
+  animation: zoom-in linear forwards;
+  animation-timeline: scroll();
+}
+
+@keyframes zoom-in-right {
+  to {
+    transform: scale(4) translateX(70rem);
+  }
+}
+@keyframes zoom-in-left {
+  to {
+    transform: scale(4) translateX(-70rem);
+  }
+}
+@keyframes zoom-in {
+  to {
+    transform: scale(2) translateZ(10rem);
+  }
 }
