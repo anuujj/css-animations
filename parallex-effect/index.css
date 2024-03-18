@@ -1,0 +1,28 @@
+:root{
+    margin: 0;
+    padding:0;
+}
+body{
+    margin:0;
+    padding:0;
+}
+.container {
+  width: 100vw;
+  height: 200vh;
+}
+.container img {
+  position: absolute;
+}
+.tree1 {
+  /* transform: scale(0.25, 0.25); */
+  height: 100vh;
+  right: 0cm;
+}
+.tree2 {
+  height: 100vh;
+  left: 0px;
+}
+.mountain {
+  height: 100vh;
+  width: 100%;
+}
