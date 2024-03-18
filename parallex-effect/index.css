@@ -5,17 +5,29 @@
 body {
   margin: 0;
   padding: 0;
+  height:200vh;
 }
 .container {
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.4rem;
+}
+p{
+  z-index: 1;
+  width: 30vw;
+  text-align: center;
 }
 .container img {
   position: absolute;
 }
 .tree1 {
   height: 100vh;
-  right: 3rem;
+  right: 0rem;
+  top: 2rem;
 }
 .tree2 {
   height: 100vh;
