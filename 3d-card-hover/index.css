@@ -1,15 +1,21 @@
+body{
+    background-color: black;
+}
 .card{
     width: 300px;
     height: 300px;
-    background-color: #decdcd;
+    background-color: black;
     border-radius: 10px;
+    color: white;
     padding: 16px;
     margin: 40px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid white;
     position: relative;
     transition: all 0.5s;
+    /* transform-style: preserve-3d; */
 }
 .card:hover{
-    transform: translate3d(0, -10px, 20px);
+    /* transform: translate3d(0, -10px, 20px); */
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
 }
